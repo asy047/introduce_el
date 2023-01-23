@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+// font-face
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// common
+$commonColor: #222;
+$mainColor: #014E9E;
+$subColor: #74C7EF;
+$greenColor: #004E3E;
+html {font-size: 10px;}
+body {
+    font-size: 1.5rem;
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-weight: 500;
+    color: #222;
+}
+
+// container
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+// loading
+#loading {
+    // 임시 디 논
+    display: none;
+    // 임시 디 논
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    // background: $subColor;
+    color: $mainColor;
+
+    p {
+        display: inline-block;
+        animation: updown 1s cubic-bezier(0.18, 0.89, 0.32, 1.28), blink .5s step-end infinite alternate;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        border-right: 3px solid;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .logo-area {
+        animation: logoAnimation 1s alternate-reverse infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        position: absolute;
+        top: 80%; left: 50%;
+        width: 150px;
+        padding: 1em;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        &-text {
+            display: block;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+        }
+    }
+
+    
+}
+.toggle-screen {
+    // 임시 디 논
+    display: none;
+    // 임시 디 논
+    position: relative;
+    width: 0;
+    // width: 100%;
+    height: 100vh;
+    background: $mainColor;
+    z-index: 99;
+    transition: .8s;
+}
+.subC {
+    position: absolute;
+    top: 0;
+    background: $subColor;
+}
+.screen-animation {
+    animation: screenAnimation .5s ease-in-out forwards;
+}
+.screen-animation-fadeout {
+    animation: screenAnimation .5s ease-in-out reverse forwards;
+}
+
+@keyframes screenAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%
+    }
+}
+@keyframes updown {
+    from {
+        top: 45%;
+    } to {
+        top: 50%;
+    }
+}
+@keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+@keyframes logoAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(5deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-5deg);
+    }
+}
+
+// mobile
+@media (max-width: 768px) {
+    .container {
+      max-width: 100%;
+    }
+  }
