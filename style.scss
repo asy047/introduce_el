@@ -51,6 +51,7 @@ body {
     }
 
     .logo-area {
+        display: inline-block;
         animation: logoAnimation 1s alternate-reverse infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
         position: absolute;
         top: 80%; left: 50%;
@@ -58,6 +59,7 @@ body {
         padding: 1em;
         transform: translate(-50%, -50%);
         z-index: 1;
+        cursor: pointer;
         &-text {
             display: block;
             text-align: center;
@@ -65,9 +67,8 @@ body {
         img {
             width: 100%;
         }
+        
     }
-
-    
 }
 .toggle-screen {
     // 임시 디 논
