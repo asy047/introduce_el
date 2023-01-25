@@ -13,12 +13,19 @@ $commonColor: #222;
 $mainColor: #014E9E;
 $subColor: #74C7EF;
 $greenColor: #004E3E;
+
+$m5: .5rem;
+$m10: 1rem;
+$m15: 1.5rem;
+$boradi: 10px;
 html {font-size: 10px;}
 body {
     font-size: 1.5rem;
     font-family: 'Pretendard-Regular', sans-serif;
     font-weight: 500;
     color: #222;    
+    text-align: center;
+
 }
 
 // container
@@ -31,13 +38,61 @@ body {
     box-sizing: border-box;
     overflow: hidden;
 }
-
 // mobile
 @media (max-width: 768px) {
     .container {
       max-width: 100%;
     }
   }
+
+// main slide
+.main-slide-area {
+    p.check-sent {
+        span.arrow {
+
+        }
+    } 
+    ul {
+        margin: 0 auto;
+        width: 90%;
+        // height: 500px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 1em;
+            width: 300px;
+            height: 500px;
+            background-color: $mainColor;
+            border-radius: $boradi;
+            box-sizing: border-box;
+            color: #fff;
+
+            &-img-area {
+                width: 100%;
+                border-radius: $boradi;
+                overflow: hidden;
+                margin-bottom: $m10;
+                img {
+                    width: 100%;
+                }
+            }
+            
+            h3 {
+                font-size: 4rem;
+                font-weight: 800;
+            }
+            span.date {
+                margin-bottom: $m10;
+            }
+            
+        }
+    }
+}
 
 
 
