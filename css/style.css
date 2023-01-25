@@ -19,8 +19,17 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #222;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
 #loading {
   display: none;
   width: 100vw;
@@ -110,10 +119,5 @@ body {
   }
   100% {
     transform: translate(-50%, -50%) rotate(-5deg);
-  }
-}
-@media (max-width: 768px) {
-  .container {
-    max-width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
