@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EL 21기에 어서오세요!</title>
-    <script src="https://unpkg.com/type-hangul"></script>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">  <!-- scss auto compiling to css-->
     <!-- 
@@ -18,85 +17,54 @@
 </head>
 <body>
     <div id="wrap">
-
-        <div id="loading">
-            <p class="typing-text">EL이 궁금해?</p>
-            <div class="logo-area">
-                <img src="img/el_logo_png.png" alt="EL로고">
-                <span class="logo-area-text">touch me!</span>
-            </div>
-        </div>
-        <div class="toggle-screen mainC"></div>
-        <div class="toggle-screen subC"></div>
+        <header>
+            <figure class="cloud cloud-sky">
+                <img src="img/cloud-sky.png" alt="">
+            </figure>
+            <figure class="cloud cloud-white">
+                <img src="img/cloud-white.png" alt="">
+            </figure>
+        </header>
 
         <div class="container">
-            <header>
-                <h1>
-                    <img src="/img/el_logo_png.png" alt="el로고">
-                    <p>Embedded Linux</p>
-                </h1>
-            </header>
+            <figure class="logo-area">
+                <img class="logo" src="/img/el_logo_png.png" alt="">
+            </figure>
+            
+            <div class="h1-area">
+                <h1>EL<span>Embedded Linux</span></h1>
+                <p>컴퓨터소프트웨어공학과 전공 동아리</p>
+                <a href="" class="apply"></a>
+            </div>
+
+
+            <div class="more-area">
+                <p>더 알아보기</p>
+                <div class="arrow-area"></div>
+            </div>
+
             <main>
-                <p class="main-desc">
-                    컴퓨터소프트웨어공학과 전공 동아리 EL은<br>
-                    2002년 창립 이래로 꾸준한 활동을 이어가며<br>
-                    전공 동아리의 표본이 되고 있습니다.<br>
-                </p>
-                <div class="main-slide-area">
-                    <p class="check-sent"><span class="arrow">▼</span> 작년에 어떤 활동을 해왔는지 확인해보세요! <span class="arrow">▼</span></p>
-                    <ul>
-                        <li class="card">
-                            <div class="card-img-area">
-                                <img class="card-img" src="img/el_ot.jpeg" alt="el_ot">
-                            </div>
-                            <h3>EL OT</h3> <span class="date">2022. 03. 25</span>
-                            <p class="card-desc">신입생 여러분들에게 선배의 꿀팁 대방출!</p>
-                            <p class="card-desc">앞으로의 EL에 대해 소개하고 첫 인사를 나누는 시간을 가졌어요.</p>
-                        </li>
-                        <li class="card">
-                            <div class="card-img-area">
-                                <img class="card-img" src="img/el_jeonujo(1).jpg" alt="el 전우조 사진 1">
-                                <img class="card-img" src="img/el_jeonujo(2).jpg" alt="el 전우조 사진 2">
-                            </div>
-                            <h3>EL 전우조</h3> <span class="date">2022. 04 - 2022. 06</span>
-                            <p class="card-desc">대학교는 처음이지..? 적응하도록 도와줄게요.</p>
-                            <p class="card-desc">학교에 아는 사람이 하나도 없어서 두렵다? 아무것도 몰라서 조언은 직접 듣고 싶다?</p>
-                            <p class="card-desc">EL 전우조와 함께라면.</p>
-                            <p class="card-desc"> I'm fearless, huh.</p>
-                        </li>
-                        <li class="card">
-                            <div class="card-img-area">
-                                <img class="card-img" src="img/el_mt(1).jpg" alt="el 엠티 사진 - 물놀이 1">
-                                <img class="card-img" src="img/el_mt(2).jpg" alt="el 엠티 사진 - 물놀이 2">
-                                <img class="card-img" src="img/el_mt(3).jpg" alt="el 엠티 사진 - 레크레이션">
-                                <img class="card-img" src="img/el_mt(4).jpg" alt="el 엠티 사진 - 바베큐">
-                            </div>
-                            <h3>EL MT</h3> <span class="date">2022. 06. 25 - 2022. 06. 26</span>
-                            <p class="card-desc">대학교의 낭만은 MT</p>
-                            <p class="card-desc">풀 펜션에서 같이 물놀이도 하고, 바베큐장에서 고기도 구워먹고!</p>
-                            <p class="card-desc">밤새 노래하고 떠들면서 딱딱한 과 MT 말고, 동아리 자체 MT로 제대로 된 낭만을 만들었어요.</p>
-                        </li>
-                        <li class="card">
-                            <div class="card-img-area">
-                                <img class="card-img" src="img/el_summer_pt(1).png" alt="el 여름 토이 프로젝트 1">
-                                <img class="card-img" src="img/el_summer_pt(2).png" alt="el 여름 토이 프로젝트 2">
-                                <img class="card-img" src="img/el_summer_pt(3).png" alt="el 여름 토이 프로젝트 3">
-                            </div>
-                            <h3>EL 하계 프로젝트</h3> <span class="date">2022. 07 - 2022. 08</span>
-                            <p class="card-desc">방학을 활용해 전공 실력을 쑥 키워보아요.</p>
-                            <p class="card-desc">웹, 앱, 게임, IoT 등등... </p>
-                            <p class="card-desc">자신이 관심 있는 분야를 공부하면서 프로젝트를 완성하고, 개강 직전 발표까지 해보는 시간을 가졌어요.</p>
-                        </li>
-                        <li class="card">
-                            <div class="card-img-area">
-                                <img class="card-img" src="img/el_tutoring(1).jpg" alt="el 튜터링 사진 1">
-                            </div>
-                            <h3>EL 멘토링</h3> <span class="date">2022. 04 - 2022. 12</span>
-                            <p class="card-desc">전공 공부가 너무 어렵다고 무서워하지 말아요.</p>
-                            <p class="card-desc">EL 선배들이 소수 과외로 시험문제와 실무에서 사용될 내용만 쏙쏙 뽑아 알려드려요.</p>
-                            <p class="card-desc">성적 장학금을 항상 놓치지 않는 선배들이 EL에 너무나 많다는 사실!</p>
-                        </li>
-                    </ul>
+                <div class="bubble-area">
+                    <figure class="img-bubble bubble">
+                        <img src="/img/ot_bubble.png" alt="">
+                    </figure>
+                    <div class="mine bubbles">
+                        <p class="bubble">22. 03. 25 EL OT</p>
+                        <p class="bubble last">신입생 여러분들에게 선배의 꿀팁 대방출!
+                            앞으로의 EL에 대해 소개하고 첫 인사를
+                            나누는 시간을 가졌어요.</p>
+                    </div>
+                </div>
+                <div class="bubble-area">
+                    <figure class="img-bubble bubble">
+                        <img src="/img/ot_bubble.png" alt="">
+                    </figure>
+                    <div class="mine bubbles">
+                        <p class="bubble">22. 03. 25 EL OT</p>
+                        <p class="bubble last">신입생 여러분들에게 선배의 꿀팁 대방출!
+                            앞으로의 EL에 대해 소개하고 첫 인사를
+                            나누는 시간을 가졌어요.</p>
+                    </div>
                 </div>
             </main>
         </div>
@@ -106,3 +74,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
