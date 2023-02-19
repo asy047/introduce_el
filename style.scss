@@ -20,7 +20,7 @@ $m5: 0.5rem;
 $m10: 1rem;
 $m15: 1.5rem;
 $boradi: 10px;
-html {font-size: 10px;}
+html {font-size: 10px; scroll-behavior: smooth;}
 body {
     font-size: 1.5rem;
     font-family: 'Pretendard-Regular', sans-serif;
@@ -293,7 +293,7 @@ main {
 }
 .btn-area {
     text-align: center;
-    
+
 }
 
 footer {
