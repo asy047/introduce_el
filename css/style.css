@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
@@ -36,6 +37,8 @@ header .cloud-white {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -73,10 +76,45 @@ header .cloud-white {
     margin-top: 200px;
   }
 }
+.container .apply {
+  display: inline-block;
+  width: 100%;
+  margin: 30px 0 15px;
+  padding: 0.8em 0.2em;
+  font-size: 18px;
+  border-radius: 10px;
+  background: #014E9E;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+.container .qna-btn {
+  display: inline-block;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #014E9E;
+}
+.container .more-area p {
+  position: relative;
+  text-align: center;
+}
+.container .more-area p::before, .container .more-area p::after {
+  content: "∨";
+  position: absolute;
+  top: 0.8em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 21px;
+  color: #555;
+}
+.container .more-area p::after {
+  top: 1.3em;
+}
 
 main {
   display: flex;
   flex-direction: column;
+  margin: 40px 0;
 }
 main .bubble-area {
   margin-top: 30px;
@@ -89,7 +127,7 @@ main .bubbles {
 main .bubble {
   display: inline-block;
   margin: 5px 5px;
-  padding: 8px 15px;
+  padding: 10px 15px;
   border-radius: 20px;
   color: white;
   line-height: 1.3;
@@ -133,6 +171,91 @@ main .mine .bubble.last::after {
   height: 20px;
   background: white;
   border-bottom-left-radius: 10px;
+}
+main .outro {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+main .outro p {
+  margin-top: 10px;
+}
+
+#qna {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#qna mark {
+  font-weight: bold;
+}
+#qna h2 {
+  position: relative;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 30px;
+  font-weight: bolder;
+  font-style: italic;
+}
+#qna h2::before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  background-color: yellow;
+  width: 92px;
+  height: 50%;
+  z-index: -1;
+}
+#qna .accordion {
+  margin-bottom: 1rem;
+}
+#qna .accordion-header {
+  border-radius: 10px 10px 0 0;
+  background-color: #eee;
+  padding: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+#qna .accordion-header::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-out;
+}
+#qna .accordion-header.active::after {
+  transform: scaleY(1);
+}
+#qna .accordion-content {
+  background-color: #fff;
+  box-shadow: 0 1px 3px #eee;
+  padding: 1rem;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  line-height: 1.3;
+  word-break: keep-all;
+}
+#qna .accordion-content.active {
+  display: block;
+  max-height: 1000px;
+}
+
+.btn-area {
+  text-align: center;
+}
+
+footer {
+  height: 50px;
+  text-align: center;
+  line-height: 100px;
 }
 
 @media (max-width: 600px) {
