@@ -69,25 +69,30 @@ setTimeout(() => {
 const bubble = document.querySelectorAll('.bubble');
 const bubbleTop = [];
 const bubbleBotom = [];
+let currentBubble = null;
 
-// for (var i = 0; i < bubble.length; i++) {
-  
-// }
-
-
-window.addEventListener('scroll', () => {
+function updateCurrentBubble() {
   var currentScroll = window.scrollY + 500;
 
   for (var i = 0; i < bubble.length; i++) {
     const content = bubble[i];
     bubbleTop[i] = content.offsetTop;
     bubbleBotom[i] = content.offsetTop + content.offsetHeight;
-    
-    if (bubbleTop[i] <= currentScroll && currentScroll < bubbleBotom[i] ) {
-      bubble[i].style.opacity = 1;
+
+    if (currentScroll >= bubbleTop[i] && currentScroll < bubbleBotom[i] ) {
+      currentBubble = bubble[i];
       break;
-    }
   }
+}}
 
+function handleScroll() {
+  window.requestAnimationFrame(() => {
+    updateCurrentBubble();
 
-})
+    if (currentBubble) {
+      currentBubble.style.opacity = 1;
+    }
+  })
+}
+
+window.addEventListener('scroll', handleScroll);
