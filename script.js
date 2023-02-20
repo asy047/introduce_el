@@ -30,6 +30,8 @@ ________________🚶🏻‍♂️_________
 
 `);
 
+
+// accordion menu
 const accordionHeaders = document.querySelectorAll('.accordion-header');
 
 accordionHeaders.forEach(header => {
@@ -46,3 +48,49 @@ accordionHeaders.forEach(header => {
     }
   });
 });
+
+
+
+// intro animation
+const cloud = document.querySelectorAll('.cloud');
+const logo = document.querySelector('.logo-area');
+console.log(logo);
+
+cloud[0].classList.add('active');
+setTimeout(() => {
+  cloud[1].classList.add('active');
+}, 500);
+setTimeout(() => {
+  logo.classList.add('active');
+}, 1000)
+
+
+// scroll animation
+
+const bubble = document.querySelectorAll('.bubble');
+const bubbleTop = [];
+const bubbleBotom = [];
+
+for (var i = 0; i < bubble.length; i++) {
+  const content = bubble[i];
+  bubbleTop[i] = content.offsetTop;
+  bubbleBotom[i] = content.offsetTop + content.offsetHeight;
+
+  bubble[i].style.opacity = 0;
+}
+
+
+window.addEventListener('scroll', () => {
+  var currentScroll = window.scrollY;
+  
+
+
+  for (var i = 0; i < bubble.length; i++) {
+    if (bubbleTop[i] - 100 <= currentScroll && currentScroll < bubbleBotom[i]) {
+      bubble[i].style.opacity = 1;
+    }
+  }
+
+
+  console.log(currentScroll);
+})
