@@ -72,7 +72,7 @@ const bubbleBotom = [];
 let currentBubble = null;
 
 function updateCurrentBubble() {
-  var currentScroll = window.scrollY + 500;
+  var currentScroll = window.scrollY + 600;
 
   for (var i = 0; i < bubble.length; i++) {
     const content = bubble[i];
