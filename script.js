@@ -85,7 +85,7 @@ window.addEventListener('scroll', () => {
 
 
   for (var i = 0; i < bubble.length; i++) {
-    if (bubbleTop[i] - 200 <= currentScroll && currentScroll < bubbleBotom[i] + 200) {
+    if (bubbleTop[i] <= currentScroll && currentScroll < bubbleBotom[i] ) {
       bubble[i].style.opacity = 1;
     }
   }
