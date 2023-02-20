@@ -70,23 +70,22 @@ const bubble = document.querySelectorAll('.bubble');
 const bubbleTop = [];
 const bubbleBotom = [];
 
-for (var i = 0; i < bubble.length; i++) {
-  const content = bubble[i];
-  bubbleTop[i] = content.offsetTop;
-  bubbleBotom[i] = content.offsetTop + content.offsetHeight;
-
-  bubble[i].style.opacity = 0;
-}
+// for (var i = 0; i < bubble.length; i++) {
+  
+// }
 
 
 window.addEventListener('scroll', () => {
-  var currentScroll = window.scrollY;
-  
-
+  var currentScroll = window.scrollY + 500;
 
   for (var i = 0; i < bubble.length; i++) {
+    const content = bubble[i];
+    bubbleTop[i] = content.offsetTop;
+    bubbleBotom[i] = content.offsetTop + content.offsetHeight;
+    
     if (bubbleTop[i] <= currentScroll && currentScroll < bubbleBotom[i] ) {
       bubble[i].style.opacity = 1;
+      break;
     }
   }
 
