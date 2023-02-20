@@ -54,7 +54,6 @@ accordionHeaders.forEach(header => {
 // intro animation
 const cloud = document.querySelectorAll('.cloud');
 const logo = document.querySelector('.logo-area');
-console.log(logo);
 
 cloud[0].classList.add('active');
 setTimeout(() => {
@@ -86,11 +85,10 @@ window.addEventListener('scroll', () => {
 
 
   for (var i = 0; i < bubble.length; i++) {
-    if (bubbleTop[i] - 100 <= currentScroll && currentScroll < bubbleBotom[i]) {
+    if (bubbleTop[i] <= currentScroll && currentScroll < bubbleBotom[i]) {
       bubble[i].style.opacity = 1;
     }
   }
 
 
-  console.log(currentScroll);
 })
