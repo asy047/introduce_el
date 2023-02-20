@@ -162,6 +162,9 @@ main .bubble {
   transition: 0.5s;
   opacity: 0;
 }
+main .bubble.active {
+  opacity: 1;
+}
 main .img-bubble {
   align-items: flex-start;
   margin: 0;

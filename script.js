@@ -83,14 +83,15 @@ function updateCurrentBubble() {
       currentBubble = bubble[i];
       break;
   }
-}}
+}
+}
 
 function handleScroll() {
   window.requestAnimationFrame(() => {
     updateCurrentBubble();
 
     if (currentBubble) {
-      currentBubble.style.opacity = 1;
+      currentBubble.classList.add('active');
     }
   })
 }
