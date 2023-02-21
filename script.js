@@ -120,7 +120,7 @@ function shareMessage() {
         },
       },
       {
-        title: '소개 페이지 바로가기',
+        title: '소개 페이지',
         link: {
           mobileWebUrl: 'https://el21.netlify.app',
           webUrl: 'https://el21.netlify.app',
