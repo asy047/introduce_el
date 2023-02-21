@@ -97,3 +97,35 @@ function handleScroll(event) {
 }
 
 window.addEventListener('scroll', handleScroll);
+
+function shareMessage() {
+  Kakao.Share.sendDefault({
+    objectType: 'feed',
+    content: {
+      title: 'EL 21기 지금 지원하기!',
+      description: `컴퓨터소프트웨어공학과 전공 동아리 EL을 소개합니다! 많은 지원 바랍니다!`,
+      imageUrl:
+        'https://asy047.github.io/introduce_el/img/el_logo_png.png',
+      link: {
+        mobileWebUrl: 'https://graceful-babka-40b815.netlify.app/',
+        webUrl: 'https://graceful-babka-40b815.netlify.app/',
+      },
+    },
+    buttons: [
+      {
+        title: '지원하러 가기',
+        link: {
+          mobileWebUrl: 'https://forms.gle/KY2UXcTnbz6oWyXC6',
+          webUrl: 'https://forms.gle/KY2UXcTnbz6oWyXC6',
+        },
+      },
+      {
+        title: '소개 페이지 바로가기',
+        link: {
+          mobileWebUrl: 'https://graceful-babka-40b815.netlify.app',
+          webUrl: 'https://graceful-babka-40b815.netlify.app',
+        },
+      }
+    ],
+  });
+}
