@@ -293,6 +293,10 @@ main .outro p {
   border-radius: 10px;
   color: #fff;
 }
+.btn-area .top-btn {
+  display: inline-block;
+  text-decoration: none;
+}
 
 footer {
   height: 50px;

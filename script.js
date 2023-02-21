@@ -86,7 +86,7 @@ function updateCurrentBubble() {
 }
 }
 
-function handleScroll() {
+function handleScroll(event) {
   window.requestAnimationFrame(() => {
     updateCurrentBubble();
 

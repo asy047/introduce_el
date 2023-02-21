@@ -192,7 +192,6 @@ main {
         line-height: 1.3;
         transition: .5s;
         opacity: 0;
-
         &.active {
             opacity: 1;
         }
@@ -339,6 +338,11 @@ main {
         border-radius: 10px;
         color: #fff;
     }
+    .top-btn {
+        display: inline-block;
+        text-decoration: none;
+    }
+    
 }
 
 footer {
