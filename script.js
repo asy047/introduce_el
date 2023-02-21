@@ -122,8 +122,8 @@ function shareMessage() {
       {
         title: '소개 페이지 바로가기',
         link: {
-          mobileWebUrl: 'https://graceful-babka-40b815.netlify.app',
-          webUrl: 'https://graceful-babka-40b815.netlify.app',
+          mobileWebUrl: 'https://el21.netlify.app',
+          webUrl: 'https://el21.netlify.app',
         },
       }
     ],
