@@ -107,8 +107,8 @@ function shareMessage() {
       imageUrl:
         'https://asy047.github.io/introduce_el/img/el_logo_png.png',
       link: {
-        mobileWebUrl: 'https://graceful-babka-40b815.netlify.app/',
-        webUrl: 'https://graceful-babka-40b815.netlify.app/',
+        mobileWebUrl: 'https://el21.netlify.app',
+        webUrl: 'https://el21.netlify.app',
       },
     },
     buttons: [
